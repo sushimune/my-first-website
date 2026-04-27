@@ -1,45 +1,76 @@
 <!DOCTYPE html>
-<html>
+<HTML>
     <head>
         <title>Anna's  Website</title>
         <style>
-            body { background-color: #ffe4e1;
+            body {background-color: #fff0f5;
                 font-family: Arial, sans-serif;
-                text-align:center;
+                margin: 0;
+                text-align: center;
+                color: #333}
+            nav {
+                background-color: hotpink;
+                padding: 15px;
             }
-            hi {color: hotpink;}
-            p {color: #333
-                font-size: 18px;
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin: 15px;
+                font-weight: bold;
             }
-        img {width: 250px;
-        border-radius: 20px;
-            border:5px solid hotpink;
-        }
-        button {background-color: hotpink;
-        color: white;
-    border: none;
-padding: 10px 20px;
-border-radius: 10px;
-font-size: 16px;
-cursor:pointer;}
-        </style>
+            section {
+                background-color: white;
+                width: 80%;
+                max-width: 700px;
+                margin: 25px auto;
+                padding: 25px;
+                border-radius: 15px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15)
+            }
+            img {
+                max-width: 300px;
+                border-radius: 15px;
+                border: 4px solid hotpink;
+            }
+            button {
+                background-color: hotpink;
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-size: 16px;
+            }
+       </style>
      </head>
 <body>
-    <h1> Welcome to my website</h1>
-    <p>Hello! This is my first website built with HTML</p>
-    <h2>About me</h2>
-    <p>I am learning how to build websites</p>
+    <nav>
+        <a href="index.html">home</a>
+        <a href="page2.html">Projects</a>
+    </nav>
+<section>
+    <h1>Anna"s Portfolio</h1>
+    <p>Welcome to my website I am learning coding, art and web design</p>
+</section>
+<section>
+    <h/2>About me</h>
+    <p>I am learning how to build websites and make video games</p>
+</section>
+ <section>
     <h2>My favorite things</h2>
     <ul>
-    <li>Coding</li>
-    <li>Gaming</li>
-    <li>Art</li>
-    <img src="https://cataas.com/cat" alt="cutecat">
+        <li>Coding</li>
+        <li>Gaming</li>
+        <li>Art</li>
     </ul>
-<a href="page2.html"
-    <button>Go to page 2</button>
-</a>
-    <img src="Saint-seiya-Shun.jpg" width="600">
+ </section>
+ <section>
+    <h2>My Art</h2>
+    <img src="Saint-seiya-Shun.jpg" alt="My drawing">
+ </section> 
+ <section>
+    <a href="page2.html">
+        <button> View my Projects</button>
+    </a>
+ </section>  
 </body>
-
 </html>
