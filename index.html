@@ -1,261 +1,363 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Anna's Portfolio</title>
+  <title>Anna's Portfolio</title>
 
-<style>
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #151515;
-color: white;
-}
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-nav {
-position: sticky;
-top: 0;
-background: #222;
-padding: 20px;
-text-align: center;
-z-index: 10;
-box-shadow: 0 4px 10px black;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #151515;
+      color: white;
+    }
 
-nav a {
-color: white;
-text-decoration: none;
-margin: 0 18px;
-font-size: 18px;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      background: #222;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px black;
+      z-index: 10;
+    }
 
-nav a:hover {
-color: #ff8ec7;
-}
+    nav a {
+      color: white;
+      margin: 0 18px;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-section {
-padding: 80px 12%;
-text-align: center;
-}
+    nav a:hover {
+      color: #ff8ec7;
+    }
 
-h2 {
-font-size: 45px;
-}
+    section {
+      padding: 80px 12%;
+      text-align: center;
+    }
 
-.line {
-width: 180px;
-height: 8px;
-background: #ff8ec7;
-margin: 10px auto 40px;
-border-radius: 10px;
-}
+    h2 {
+      font-size: 45px;
+    }
 
-.hero {
-height: 90vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background: radial-gradient(circle, #2a1b2e, #151515);
-}
+    .line {
+      width: 180px;
+      height: 8px;
+      background: #ff8ec7;
+      margin: 10px auto 40px;
+      border-radius: 10px;
+    }
 
-.hero h1 {
-font-size: 55px;
-}
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle, #2a1b2e, #151515);
+    }
 
-.pink {
-color: #ff8ec7;
-}
+    .hero h1 {
+      font-size: 55px;
+    }
 
-.button {
-margin-top: 25px;
-padding: 15px 30px;
-border: 2px solid #ff8ec7;
-color: #ff8ec7;
-text-decoration: none;
-font-size: 20px;
-border-radius: 8px;
-}
+    .pink {
+      color: #ff8ec7;
+    }
 
-.button:hover {
-background: #ff8ec7;
-color: #151515;
-}
+    .button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: 2px solid #ff8ec7;
+      color: #ff8ec7;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 8px;
+    }
 
-.about-box {
-max-width: 700px;
-margin: auto;
-color: #ddd;
-}
+    .button:hover {
+      background: #ff8ec7;
+      color: #151515;
+    }
 
-.skill {
-display: inline-block;
-border: 2px solid #ff8ec7;
-padding: 12px 20px;
-margin: 10px;
-border-radius: 10px;
-}
+    .about-box {
+      max-width: 750px;
+      margin: auto;
+      color: #ddd;
+      font-size: 18px;
+      line-height: 1.7;
+    }
 
-.projects {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-}
+    .skill {
+      display: inline-block;
+      border: 2px solid #ff8ec7;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 10px;
+    }
 
-.project-card {
-background: #222;
-padding: 20px;
-border-radius: 12px;
-border: 2px solid #ff8ec7;
-}
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-.project-card img {
-width: 100%;
-border-radius: 10px;
-margin-top: 10px;
-}
+    .project-card {
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      border: 2px solid #ff8ec7;
+    }
 
-/* TIC TAC TOE */
-.board {
-display: grid;
-grid-template-columns: repeat(3, 80px);
-gap: 10px;
-justify-content: center;
-margin-top: 20px;
-}
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
 
-.cell {
-width: 80px;
-height: 80px;
-background: #333;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 30px;
-cursor: pointer;
-}
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-button {
-margin-top: 15px;
-padding: 10px 20px;
-background: #ff8ec7;
-border: none;
-cursor: pointer;
-}
+    .cell {
+      width: 80px;
+      height: 80px;
+      background: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
 
-input, textarea {
-width: 100%;
-padding: 12px;
-margin: 10px 0;
-background: #222;
-border: none;
-color: white;
-}
+    .sweet-box {
+      max-width: 400px;
+      margin: auto;
+      background: #222;
+      padding: 25px;
+      border-radius: 15px;
+      border: 2px solid #ff8ec7;
+    }
 
-footer {
-padding: 20px;
-text-align: center;
-background: #222;
-}
-</style>
+    .sweet-board {
+      width: 300px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(4, 65px);
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .card {
+      width: 65px;
+      height: 65px;
+      background: #ff8fc7;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card.matched {
+      background: #b8ffd0;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .popup-box {
+      background: #fff4c7;
+      padding: 30px;
+      border-radius: 20px;
+      color: black;
+      border: 4px solid white;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #222;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #ff8ec7;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #222;
+    }
+  </style>
 </head>
 
 <body>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+  <a href="#home">Home</a>
+  <a href="#about">About Me</a>
+  <a href="#projects">Projects</a>
+  <a href="#tic-tac-toe">Tic Tac Toe</a>
+  <a href="#sweet">Sweet Match</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero" id="home">
-<h1>Hello, I'm <span class="pink">Anna</span></h1>
-<p>Beginner developer, artist, and future game creator</p>
-<a href="#projects" class="button">View My Work ↓</a>
+  <h1>Hello, I'm <span class="pink">Anna</span></h1>
+  <p>Beginner developer, artist, and future game creator</p>
+  <a href="#projects" class="button">View My Work ↓</a>
 </section>
 
 <section id="about">
-<h2>About Me</h2>
-<div class="line"></div>
+  <h2>About Me</h2>
+  <div class="line"></div>
 
-<div class="about-box">
-<p>
-Hi, I’m Anna — a beginner developer and artist who is passionate about
-creating both technical and creative projects. I’m currently learning
-web development, game development, and improving my coding skills step by step.
-</p>
+  <div class="about-box">
+    <p>
+      Hi, I’m Anna — a beginner developer and artist who is passionate about
+      creating both technical and creative projects. I’m currently learning
+      web development, game development, and improving my coding skills step by step.
+    </p>
 
-<p>
-I enjoy building interactive projects like games, designing websites,
-and creating anime-inspired artwork. One of my favorite styles is based on
-series like Saint Seiya, where I focus on character design, color, and detail.
-</p>
+    <p>
+      I enjoy building interactive projects like games, designing websites,
+      and creating anime-inspired artwork. One of my favorite styles is based on
+      Saint Seiya, where I focus on character design, color, and detail.
+    </p>
 
-<p>
-Right now, I’m working on improving my skills in HTML, CSS, and Python,
-while also exploring how to turn my ideas into real, functional projects.
-My goal is to become a game developer and create experiences that people
-can enjoy and connect with.
-</p>
+    <p>
+      Right now, I’m working on improving my skills in HTML, CSS, and Python,
+      while also exploring how to turn my ideas into real, functional projects.
+      My goal is to become a game developer and create experiences that people
+      can enjoy and connect with.
+    </p>
+  </div>
 
-<p>
-Outside of coding, I spend my time drawing, learning new things, and
-experimenting with creative ideas. I believe in constantly growing and
-pushing myself to improve both technically and artistically.
-</p>
-</div>
-
-<div>
-<span class="skill">HTML</span>
-<span class="skill">CSS</span>
-<span class="skill">Python</span>
-<span class="skill">Art</span>
-</div>
+  <div>
+    <span class="skill">HTML</span>
+    <span class="skill">C++ and C#</span>
+    <span class="skill">Python</span>
+    <span class="skill">Art</span>
+    <span class="skill">Game Design</span>
+  </div>
 </section>
 
 <section id="projects">
-<h2>Projects</h2>
-<div class="line"></div>
+  <h2>Projects</h2>
+  <div class="line"></div>
 
-<div class="projects">
+  <div class="projects">
+    <div class="project-card">
+      <h3>Tic Tac Toe</h3>
+      <p>A beginner JavaScript game project.</p>
+      <a href="#tic-tac-toe" class="button">Play Tic Tac Toe ↓</a>
+    </div>
 
-<div class="project-card">
-<h3>Tic Tac Toe</h3>
-<p>Play my game!</p>
+    <div class="project-card">
+      <h3>Sweet Match</h3>
+      <p>A cute candy-themed memory game made with HTML, CSS, and JavaScript.</p>
+      <a href="#sweet" class="button">Play Sweet Match ↓</a>
+    </div>
 
-<div class="board" id="board"></div>
-<button onclick="restart()">Restart</button>
-</div>
+    <div class="project-card">
+      <h3>Saint Seiya Art</h3>
+      <p>Fan art inspired by Saint Seiya ✨</p>
+      <img src="Saint-seiya-shin.jpeg">
+    </div>
 
-<div class="project-card">
-<h3>Saint Seiya Art</h3>
-<p>Fan art inspired by Saint Seiya ✨</p>
+    <div class="project-card">
+      <h3>My Website</h3>
+      <p>This portfolio website made with HTML, CSS, and JavaScript 💖</p>
+      <a href="#home" class="button">Back to Top ↑</a>
+    </div>
+  </div>
+</section>
 
-<img src="Saint-seiya-Shun.jpg">
-</div>
+<section id="tic-tac-toe">
+  <h2>Tic Tac Toe</h2>
+  <div class="line"></div>
 
-<div class="project-card">
-<h3>My Website</h3>
-<p>This portfolio 💖</p>
-</div>
+  <div class="project-card" style="max-width: 400px; margin: auto;">
+    <p>A simple game where two players take turns placing X and O.</p>
 
-</div>
+    <div class="board" id="board"></div>
+
+    <button onclick="restart()">Restart Game</button>
+  </div>
+</section>
+
+<section id="sweet">
+  <h2>Sweet Match</h2>
+  <div class="line"></div>
+
+  <div class="sweet-box">
+    <p>🍓 A cute memory matching game 🍓</p>
+    <p>Moves: <span id="moves">0</span></p>
+
+    <div class="sweet-board" id="gameBoard"></div>
+
+    <button onclick="restartGame()">Restart Game</button>
+  </div>
+
+  <div class="popup" id="popup">
+    <div class="popup-box">
+      <h2>You Win! ✨</h2>
+      <p>You matched all the cards!</p>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
-<div class="line"></div>
+  <h2>Contact</h2>
+  <div class="line"></div>
 
-<form action="mailto:carra1828@gmail.com" method="POST" enctype="text/plain">
-<input name="name" placeholder="Name" required>
-<input name="email" placeholder="Email" required>
-<textarea name="message" placeholder="Message" required></textarea>
-<button type="submit">Send</button>
-</form>
+  <form action="mailto:carra1828@gmail.com" method="POST" enctype="text/plain">
+    <input name="name" placeholder="Name" required>
+    <input name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
 
 <footer>
-© 2026 Anna
+  © 2026 Anna
 </footer>
 
 <script>
@@ -263,31 +365,101 @@ let board = ["","","","","","","","",""];
 let current = "X";
 
 function draw() {
-const boardDiv = document.getElementById("board");
-boardDiv.innerHTML = "";
+  const boardDiv = document.getElementById("board");
+  boardDiv.innerHTML = "";
 
-board.forEach((cell, i) => {
-const div = document.createElement("div");
-div.className = "cell";
-div.innerText = cell;
-div.onclick = () => move(i);
-boardDiv.appendChild(div);
-});
+  board.forEach((cell, i) => {
+    const div = document.createElement("div");
+    div.className = "cell";
+    div.innerText = cell;
+    div.onclick = () => move(i);
+    boardDiv.appendChild(div);
+  });
 }
 
 function move(i) {
-if (board[i] !== "") return;
-board[i] = current;
-current = current === "X" ? "O" : "X";
-draw();
+  if (board[i] !== "") return;
+  board[i] = current;
+  current = current === "X" ? "O" : "X";
+  draw();
 }
 
 function restart() {
-board = ["","","","","","","","",""];
-draw();
+  board = ["","","","","","","","",""];
+  current = "X";
+  draw();
 }
 
 draw();
+
+const emojis = ["🍓", "🍰", "🍬", "⭐", "🌸", "🧁", "🍒", "💖"];
+let cards = [];
+let flipped = [];
+let matches = 0;
+let moves = 0;
+
+function startGame() {
+  const gameBoard = document.getElementById("gameBoard");
+  gameBoard.innerHTML = "";
+
+  flipped = [];
+  matches = 0;
+  moves = 0;
+  document.getElementById("moves").textContent = moves;
+  document.getElementById("popup").style.display = "none";
+
+  cards = [...emojis, ...emojis].sort(() => Math.random() - 0.5);
+
+  cards.forEach((emoji) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.textContent = "🎀";
+    card.dataset.emoji = emoji;
+    card.onclick = flipCard;
+    gameBoard.appendChild(card);
+  });
+}
+
+function flipCard() {
+  if (
+    flipped.length === 2 ||
+    this.classList.contains("matched") ||
+    this.textContent !== "🎀"
+  ) {
+    return;
+  }
+
+  this.textContent = this.dataset.emoji;
+  flipped.push(this);
+
+  if (flipped.length === 2) {
+    moves++;
+    document.getElementById("moves").textContent = moves;
+
+    if (flipped[0].dataset.emoji === flipped[1].dataset.emoji) {
+      flipped[0].classList.add("matched");
+      flipped[1].classList.add("matched");
+      flipped = [];
+      matches++;
+
+      if (matches === emojis.length) {
+        document.getElementById("popup").style.display = "flex";
+      }
+    } else {
+      setTimeout(() => {
+        flipped[0].textContent = "🎀";
+        flipped[1].textContent = "🎀";
+        flipped = [];
+      }, 800);
+    }
+  }
+}
+
+function restartGame() {
+  startGame();
+}
+
+startGame();
 </script>
 
 </body>
