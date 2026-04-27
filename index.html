@@ -1,112 +1,274 @@
 <!DOCTYPE html>
-<HTML>
-    <head>
-        <title>Anna's  Website</title>
-        <style>
-            body {
-                margin: 0;
-                font-family:'Trebuchet MS', sans-serif;
-                text-align: center;
-                color: #4a2c3a;
-                background: linear-gradient(135deg, #ffe4f1, #ffd1dc,#e6d6ff);
-                overflow-x: hidden;
-            }
-        body::before{
-            content: "✨✨ ✨✨ ✨✨✨✨✨";
-            position: fixed;
-            top: -20px;
-            left: 0;
-            width: 100%;
-            font-size: 30px;
-            color: white;
-            animation: sparkleFall 6s linear infinite;
-            pointer-events: none;
-        }
-        @keyframes sparkleFall {
-            0%{
-             transform: translateY(-50px);
-             opacity: 1;}
-            100%{
-                transform: translateY(100vh);
-                opacity: 0;}
-            }
-            nav {
-                background: rgba(255, 106, 180, 0.8);
-                padding: 15px;
-                position: sticky;
-                top: 0;
-                backdrop-filter: blur(8px);
-            }
-            nav a {
-                color: white;
-                text-decoration: none;
-                margin: 15px;
-                font-weight: bold;
-            }
-        section {
-            background: rgba(255, 255, 255, 0.85);
-            width: 85%;
-            max-width: 750px;
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 25px;
-            border: 3px solid #ffb6d9;
-            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.35);
-        }
-        h1 {
-            font-size: 42px;
-            color: #ff4fa3;
-            text-shadow: 2px 2px white;
-        }
-        h2 {
-            color: #d94f9f
-        }
-        img {
-            width: 280px;
-            border-radius: 25px;
-            border: 5px solid #ff9fd6;
-            box-shadow: 0 8px 20px rgba(255, 205, 180, 0.4);
-            transition: transform 0.3s;
-        }
-        img:hover {
-            transform: scale(1.06) rotate(1deg);
-        }
-        button {
-            background: linear-gradient(45deg, #ff69b4, #c084fc);
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 30px;
-            font-size: 17px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
-        }
-        button:hover {
-            transform: scale(1.08);
-        }
-        </style>
+<html>
+<head>
+<title>Anna's Portfolio</title>
+
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #151515;
+color: white;
+}
+
+nav {
+position: sticky;
+top: 0;
+background: #222;
+padding: 20px;
+text-align: center;
+z-index: 10;
+box-shadow: 0 4px 10px black;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin: 0 18px;
+font-size: 18px;
+}
+
+nav a:hover {
+color: #ff8ec7;
+}
+
+section {
+padding: 80px 12%;
+text-align: center;
+}
+
+h2 {
+font-size: 45px;
+}
+
+.line {
+width: 180px;
+height: 8px;
+background: #ff8ec7;
+margin: 10px auto 40px;
+border-radius: 10px;
+}
+
+.hero {
+height: 90vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: radial-gradient(circle, #2a1b2e, #151515);
+}
+
+.hero h1 {
+font-size: 55px;
+}
+
+.pink {
+color: #ff8ec7;
+}
+
+.button {
+margin-top: 25px;
+padding: 15px 30px;
+border: 2px solid #ff8ec7;
+color: #ff8ec7;
+text-decoration: none;
+font-size: 20px;
+border-radius: 8px;
+}
+
+.button:hover {
+background: #ff8ec7;
+color: #151515;
+}
+
+.about-box {
+max-width: 700px;
+margin: auto;
+color: #ddd;
+}
+
+.skill {
+display: inline-block;
+border: 2px solid #ff8ec7;
+padding: 12px 20px;
+margin: 10px;
+border-radius: 10px;
+}
+
+.projects {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+
+.project-card {
+background: #222;
+padding: 20px;
+border-radius: 12px;
+border: 2px solid #ff8ec7;
+}
+
+.project-card img {
+width: 100%;
+border-radius: 10px;
+margin-top: 10px;
+}
+
+/* TIC TAC TOE */
+.board {
+display: grid;
+grid-template-columns: repeat(3, 80px);
+gap: 10px;
+justify-content: center;
+margin-top: 20px;
+}
+
+.cell {
+width: 80px;
+height: 80px;
+background: #333;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+cursor: pointer;
+}
+
+button {
+margin-top: 15px;
+padding: 10px 20px;
+background: #ff8ec7;
+border: none;
+cursor: pointer;
+}
+
+input, textarea {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+background: #222;
+border: none;
+color: white;
+}
+
+footer {
+padding: 20px;
+text-align: center;
+background: #222;
+}
+</style>
+</head>
+
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="page2.html">Projects</a>
-    </nav>
-    <section>
-        <h1>Anna's Portfolio</h1>
-        <p>Welcome to my website </p>
-    </section>
-    <section>
-        <h2>About me</h2>
-        <p>I'm learning coding,art web design, and creating video games</p>
-    </section>
-    <section>
-        <h2>My art</h2>
-        <img src="Saint-seiya-Shun.jpg" alt="My drawing">
-    </section>
-    <section>
-        <a href="page2.html">
-            <button>View my projects</button>
-        </a>
-    </section>
-    </body>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<h1>Hello, I'm <span class="pink">Anna</span></h1>
+<p>Beginner developer, artist, and future game creator</p>
+<a href="#projects" class="button">View My Work ↓</a>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="line"></div>
+
+<div class="about-box">
+<p>
+I'm learning coding, game development, and creating art.
+I love anime-inspired designs and want to build creative projects.
+</p>
+</div>
+
+<div>
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">Python</span>
+<span class="skill">Art</span>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="line"></div>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Tic Tac Toe</h3>
+<p>Play my game!</p>
+
+<div class="board" id="board"></div>
+<button onclick="restart()">Restart</button>
+</div>
+
+<div class="project-card">
+<h3>Saint Seiya Art</h3>
+<p>Fan art inspired by Saint Seiya ✨</p>
+
+<img src="Saint-seiya-Shun.jpg">
+</div>
+
+<div class="project-card">
+<h3>My Website</h3>
+<p>This portfolio 💖</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="line"></div>
+
+<form action="mailto:carra1828@gmail.com" method="POST" enctype="text/plain">
+<input name="name" placeholder="Name" required>
+<input name="email" placeholder="Email" required>
+<textarea name="message" placeholder="Message" required></textarea>
+<button type="submit">Send</button>
+</form>
+</section>
+
+<footer>
+© 2026 Anna
+</footer>
+
+<script>
+let board = ["","","","","","","","",""];
+let current = "X";
+
+function draw() {
+const boardDiv = document.getElementById("board");
+boardDiv.innerHTML = "";
+
+board.forEach((cell, i) => {
+const div = document.createElement("div");
+div.className = "cell";
+div.innerText = cell;
+div.onclick = () => move(i);
+boardDiv.appendChild(div);
+});
+}
+
+function move(i) {
+if (board[i] !== "") return;
+board[i] = current;
+current = current === "X" ? "O" : "X";
+draw();
+}
+
+function restart() {
+board = ["","","","","","","","",""];
+draw();
+}
+
+draw();
+</script>
+
+</body>
 </html>
