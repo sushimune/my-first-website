@@ -1,11 +1,134 @@
 <!Doctype html>
 <html>
 <head>
-    <title>Page2</title>
+    <title>Anna's Projects</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Trebuchet MS' sans-serif;
+        text-align: center;
+        color: #4a2c3a;
+        background: linear-gradient(135deg, #ffe4f1, #ffd1dc, #e6d6ff);
+        overflow-x: hidden;
+    }
+    body::before {
+        content: "✦ ✧ ✨ ♡ ✦ ✧ ✨ ♡ ✦ ✧";
+        position: fixed;
+        top: -20px;
+        left: 0;
+        width: 100;
+        font-size: 30px;
+        color: pink;
+        animation: sparkleFall 10s linear infinite;
+        pointer-events: none;
+    }
+    @keyframes sparkleFall {
+        0% {
+            tranform: translateY(-50px);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+    }
+    nav {
+        background: rgba(255, 105, 180, 0.8);
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(8px);
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 15px;
+        font-weight: bold;
+    }
+    section {
+        background: rgba(255, 255, 255, 0.85);
+        width: 85%;
+        max-width: 850px;
+        margin: 30px;
+        border-radius: 25px;
+        border: 3px solid #ffb6d9;
+        box-shadow: 0 10px 25px rgba(255, 105, 180, 0.35);
+    }
+    h1 {
+        font-size: 42px;
+        color: #ff4fa3;
+        text-shadow: 2px 2px white;
+    }
+    h2 {
+        color: #d94f9f
+    }
+    .project-card {
+        background: #fff7fb;
+        border: 2px solid #ffc1e3;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 6px 15px rgba(255, 105, 180, 0.25);
+    }
+    img {
+        width: 250px;
+        border-radius: 20px;
+        border: 5px solid #ff9fd6;
+        box-shadow: 0 8px rgba(255, 105, 180, 0.4);
+        transition: transform 0.3s;
+    }
+    img:hover {
+        transform: scale(1.06) rotate(1deg);
+    }
+    button { 
+        background: linear-gradiant(45deg, #ff69b4, #c084fc);
+        color: white;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 30px;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 6px 15px rgba(255, 105, 180,0.4);
+    }
+    button:hover {
+        transform: scale(1.08);
+    }
+</style>
 </head>
-<body style="text-align:center; background-color:#ffe4e1;"
- <h1>This is my second page</h1>
- <p>welcome to my project</p>
- <a href="index.html"> Go back </a>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="page2.html">Projects</a>
+    </nav>
+    <sections>
+        <h1>My projects</h1>
+        <p>This sections shows my coding projects and my artwork</p>
+     </sections>
+     <section>
+        <h2>My Coding Projects</h2>
+        <div class="Project-card">
+        <p>This is my first project</p></div>
+        <div class="project-card">
+            <h3>Coming soon</h3>
+        </div>
+     </section>
+     <section>
+        <h2>Art Projects</h2>
+        <div class="project-card">
+            <h3>Saint Seiya Shun drawing</h3>
+            <img src="Saint-seiya-Shun.jpg" alt="Saint Seiya Shun Drawing">
+            <p> This is from my favorite anime and my first digital drawing</p>
+        </div>
+     </section>
+     <section>
+        <h2>Future Ideas</h2>
+        <div class="project-card">
+            <p>More art, games and coding projects coming soon</p>
+        </div>
+        <a href="index.html">
+            <button>Back Home</button>
+        </a>
+     </section>
 </body>
 </html>
