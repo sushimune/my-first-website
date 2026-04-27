@@ -3,14 +3,39 @@
     <head>
         <title>Anna's  Website</title>
         <style>
-            body {background-color: #fff0f5;
-                font-family: Arial, sans-serif;
+            body {
                 margin: 0;
+                font-family:'Trebuchet MS', sans-serif;
                 text-align: center;
-                color: #333}
+                color: #4a2c3a;
+                background: linear-gradient(135deg, #ffe4f1, #ffd1dc,#e6d6ff);
+                overflow-x: hidden;
+            }
+        body::before{
+            content: "✨✨ ✨✨ ✨✨✨✨✨";
+            position: fixed;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            font-size: 30px;
+            color: white;
+            animation: sparkleFall 6s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes sparkleFall {
+            0%{
+             transform: translateY(-50px);
+             opacity: 1;}
+            100%{
+                transform: translateY(100vh);
+                opacity: 0;}
+            }
             nav {
-                background-color: hotpink;
+                background: rgba(255, 106, 180, 0.8);
                 padding: 15px;
+                position: sticky;
+                top: 0;
+                backdrop-filter: blur(8px);
             }
             nav a {
                 color: white;
@@ -18,59 +43,70 @@
                 margin: 15px;
                 font-weight: bold;
             }
-            section {
-                background-color: white;
-                width: 80%;
-                max-width: 700px;
-                margin: 25px auto;
-                padding: 25px;
-                border-radius: 15px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.15)
-            }
-            img {
-                max-width: 300px;
-                border-radius: 15px;
-                border: 4px solid hotpink;
-            }
-            button {
-                background-color: hotpink;
-                color: white;
-                border: none;
-                padding: 12px 20px;
-                border-radius: 8px;
-                font-size: 16px;
-            }
-       </style>
-     </head>
+        section {
+            background: rgba(255, 255, 255, 0.85);
+            width: 85%;
+            max-width: 750px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 25px;
+            border: 3px solid #ffb6d9;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.35);
+        }
+        h1 {
+            font-size: 42px;
+            color: #ff4fa3;
+            text-shadow: 2px 2px white;
+        }
+        h2 {
+            color: #d94f9f
+        }
+        img {
+            width: 280px;
+            border-radius: 25px;
+            border: 5px solid #ff9fd6;
+            box-shadow: 0 8px 20px rgba(255, 205, 180, 0.4);
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.06) rotate(1deg);
+        }
+        button {
+            background: linear-gradient(45deg, #ff69b4, #c084fc);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+        }
+        button:hover {
+            transform: scale(1.08);
+        }
+        </style>
 <body>
     <nav>
-        <a href="index.html">home</a>
+        <a href="index.html">Home</a>
         <a href="page2.html">Projects</a>
     </nav>
-<section>
-    <h1>Anna's Portfolio</h1>
-    <p>Welcome to my website I am learning coding, art and web design</p>
-</section>
-<section>
-    <h/2>About me</h>
-    <p>I am learning how to build websites and make video games</p>
-</section>
- <section>
-    <h2>My favorite things</h2>
-    <ul>
-        <li>Coding</li>
-        <li>Gaming</li>
-        <li>Art</li>
-    </ul>
- </section>
- <section>
-    <h2>My Art</h2>
-    <img src="Saint-seiya-Shun.jpg" alt="My drawing">
- </section> 
- <section>
-    <a href="page2.html">
-        <button> View my Projects</button>
-    </a>
- </section>  
-</body>
+    <section>
+        <h1>Anna's Portfolio</h1>
+        <p>Welcome to my website </p>
+    </section>
+    <section>
+        <h2>About me</h2>
+        <p>I'm learning coding,art web design, and creating video games</p>
+    </section>
+    <section>
+        <h2>My art</h2>
+        <img src="Saint-seiya-Shun.jpg" alt="My drawing">
+    </section>
+    <section>
+        <a href="page2.html">
+            <button>View my projects</button>
+        </a>
+    </section>
+    </body>
 </html>
